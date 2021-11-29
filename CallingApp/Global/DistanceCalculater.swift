@@ -2,7 +2,7 @@
 //  DistanceCalculater.swift
 //  CallingApp
 //
-//  Created by Hilen Adhikari on 10/10/21.
+//  Created by Hari Bista on 10/10/21.
 //
 
 import Foundation

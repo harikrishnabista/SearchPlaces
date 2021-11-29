@@ -8,7 +8,6 @@
 import UIKit
 
 
-
 class PlacesListViewController: UIViewController {
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
@@ -18,15 +17,16 @@ class PlacesListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupTableView()
+        self.loadPlaces()
+    }
+    
+    private func setupTableView(){
         self.tableView.dataSource = self
         self.tableView.delegate = self
         self.searchBar.delegate = self
-        self.tableView.reloadData()
-        style()
-    }
-    
-    func style() {
         self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.reloadData()
     }
     
     private func loadPlaces(){
@@ -55,6 +55,15 @@ extension PlacesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let place = self.viewModel.places[indexPath.row]
+        if let vc = self.storyboard?.instantiateViewController(withIdentifier: "PlaceDetailsViewController") as? PlaceDetailsViewController {
+            vc.place = place
+            
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
 }
 
 extension PlacesListViewController : UITableViewDataSource {
@@ -68,6 +77,7 @@ extension PlacesListViewController : UITableViewDataSource {
         cell.displayData(place: place)
         return cell
     }
+    
 }
 
 extension PlacesListViewController : UISearchBarDelegate {

@@ -2,7 +2,7 @@
 //  #imageLiteral(resourceName: "icons8-star-filled-50.png")#imageLiteral(resourceName: "icons8-star-half-50.png")PlaceTableViewCell.swift
 //  CallingApp
 //
-//  Created by Hilen Adhikari on 10/9/21.
+//  Created by Hari Bista on 10/9/21.
 //
 
 import Foundation
@@ -71,7 +71,7 @@ class PlaceTableViewCell : UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func displayData(place: Place) {
+    func displayData(place: PlaceSummary) {
         self.nameLabel.text = place.nameDisplayValue
 
         self.ratingLabel.text = "\(String(describing: place.rating))"
@@ -90,7 +90,7 @@ class PlaceTableViewCell : UITableViewCell {
 
         self.iconImageView.image = UIImage(named: "noImage")
         
-//        URL(string: "https://maps.googleapis.com/maps/api/place/photo?photo_reference=" +  place.reference
+//        let iconUrl = "https://maps.googleapis.com/maps/api/place/photo?maxwidth=320&photo_reference=Aap_uEAwb1FC8HT_cqknybPu3Dcz2H9VKXNPlYKonXog-OcoeK3nmh1kGHCCFZFq3m8SNwp6AWVaBm2utvaIRSw1rmcpQNdNIoDSt_TJ5bxCkn1CAID5cQ5Oy8LkkTqLwqgYLxRAs719UzMWPU1_lGOK2yIh5wW-qJSN9QlrPMsf-nKbC-9V&key=AIzaSyBPUsycPYmVE2Nkccw7z0IliWM_i80YzZQ"
         
         if let iconUrl = URL(string: place.icon) {
             ImageDownloadHelper.shared.downloadImage(url: iconUrl) { image in
@@ -103,7 +103,7 @@ class PlaceTableViewCell : UITableViewCell {
         self.displayRatingUI(for: place)
     }
     
-    func displayRatingUI(for place: Place) {
+    func displayRatingUI(for place: PlaceSummary) {
         self.ratingStackView.removeAllArrangedSubviews()
         let rating = Int(place.rating.rounded(.down))
 
@@ -120,10 +120,10 @@ class PlaceTableViewCell : UITableViewCell {
     
 }
 
-extension Place {
+extension PlaceSummary {
     
     var nameDisplayValue : String {
-        let distance = "\(String(format: "%.1f", self.distance)) meters"
+        let distance = "\(String(format: "%.1f", self.distance)) Meters"
         return self.name +  " (\(distance))"
     }
     

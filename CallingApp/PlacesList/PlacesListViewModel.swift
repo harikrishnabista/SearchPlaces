@@ -2,7 +2,7 @@
 //  PlacesListViewModel.swift
 //  CallingApp
 //
-//  Created by Hilen Adhikari on 10/9/21.
+//  Created by Hari Bista on 10/9/21.
 //
 
 import Foundation
@@ -15,11 +15,8 @@ class PlacesApiCaller<T:Decodable>: ApiCallerProcol {
 }
 
 class PlacesListViewModel {
-
-    var places: [Place] = []
-    
+    var places: [PlaceSummary] = []
     private let apiKey = "AIzaSyBPUsycPYmVE2Nkccw7z0IliWM_i80YzZQ"
-    
     private var endPoint = "place/textsearch/json"
 
     func fetchPlacesFor(query:String, completion: @escaping (Bool,String?) -> Void) {

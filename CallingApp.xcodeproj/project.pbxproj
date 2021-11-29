@@ -19,6 +19,9 @@
 		74483D552712AA99000B34ED /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74483D542712AA99000B34ED /* PlaceTableViewCell.swift */; };
 		74483D572712D9B9000B34ED /* DistanceCalculater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74483D562712D9B9000B34ED /* DistanceCalculater.swift */; };
 		74483D592712E5F0000B34ED /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74483D582712E5F0000B34ED /* CommonExtensions.swift */; };
+		74483D5C2712EEA8000B34ED /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74483D5B2712EEA8000B34ED /* PlaceDetailsViewController.swift */; };
+		74483D5E2712F406000B34ED /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74483D5D2712F406000B34ED /* PhotoCell.swift */; };
+		7477D3A82713033C0023D4B9 /* PlaceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7477D3A72713033C0023D4B9 /* PlaceDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +39,9 @@
 		74483D542712AA99000B34ED /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		74483D562712D9B9000B34ED /* DistanceCalculater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DistanceCalculater.swift; sourceTree = "<group>"; };
 		74483D582712E5F0000B34ED /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
+		74483D5B2712EEA8000B34ED /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		74483D5D2712F406000B34ED /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		7477D3A72713033C0023D4B9 /* PlaceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +74,7 @@
 		74483D3427129A9F000B34ED /* CallingApp */ = {
 			isa = PBXGroup;
 			children = (
+				74483D5A2712EE87000B34ED /* PlaceDetailsViewController */,
 				74483D4F2712A70B000B34ED /* PlacesList */,
 				74483D4C27129CA0000B34ED /* Resources */,
 				74483D4B27129C9A000B34ED /* Global */,
@@ -107,6 +114,16 @@
 				74483D582712E5F0000B34ED /* CommonExtensions.swift */,
 			);
 			path = PlacesList;
+			sourceTree = "<group>";
+		};
+		74483D5A2712EE87000B34ED /* PlaceDetailsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				74483D5B2712EEA8000B34ED /* PlaceDetailsViewController.swift */,
+				7477D3A72713033C0023D4B9 /* PlaceDetailsViewModel.swift */,
+				74483D5D2712F406000B34ED /* PhotoCell.swift */,
+			);
+			path = PlaceDetailsViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,9 +202,12 @@
 				74483D512712A71F000B34ED /* PlacesListViewModel.swift in Sources */,
 				74483D552712AA99000B34ED /* PlaceTableViewCell.swift in Sources */,
 				74483D532712A7D0000B34ED /* DataModels.swift in Sources */,
+				7477D3A82713033C0023D4B9 /* PlaceDetailsViewModel.swift in Sources */,
 				74483D3827129A9F000B34ED /* SceneDelegate.swift in Sources */,
+				74483D5C2712EEA8000B34ED /* PlaceDetailsViewController.swift in Sources */,
 				74483D572712D9B9000B34ED /* DistanceCalculater.swift in Sources */,
 				74483D592712E5F0000B34ED /* CommonExtensions.swift in Sources */,
+				74483D5E2712F406000B34ED /* PhotoCell.swift in Sources */,
 				74483D4E2712A6D6000B34ED /* ApiCaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
